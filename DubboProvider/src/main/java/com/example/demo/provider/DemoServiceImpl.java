@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * @ProjectName: SpringBootDubboDemo
  * @Package: com.example.demo.provider
  * @ClassName: DemoServiceImpl
- * @Description: java类作用描述
+ * @Description: Api接口的实现
  * @Author: zhoumiaode
  * @CreateDate: 2018/08/30 9:37
  * @UpdateUser: Neil.Zhou

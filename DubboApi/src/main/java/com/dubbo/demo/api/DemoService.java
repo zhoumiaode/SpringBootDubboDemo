@@ -4,7 +4,7 @@ package com.dubbo.demo.api;
  * @ProjectName: SpringBootDubboDemo
  * @Package: com.dubbo.demo.api
  * @ClassName: DemoService
- * @Description: java类作用描述
+ * @Description: dubbo服务Api接口
  * @Author: zhoumiaode
  * @CreateDate: 2018/08/30 9:25
  * @UpdateUser: Neil.Zhou

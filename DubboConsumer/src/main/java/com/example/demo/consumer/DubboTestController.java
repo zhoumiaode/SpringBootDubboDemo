@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @ProjectName: SpringBootDubboDemo
  * @Package: com.example.demo.consumer
  * @ClassName: DubboTestController
- * @Description: java类作用描述
+ * @Description: 消费者Controller
  * @Author: zhoumiaode
  * @CreateDate: 2018/08/30 9:45
  * @UpdateUser: Neil.Zhou
