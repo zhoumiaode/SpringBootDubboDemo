@@ -14,6 +14,9 @@ package com.dubbo.demo.api.domain;
  */
 public class TT {
 
+
     private String a;
     private String b;
+    private String as;
+
 }
