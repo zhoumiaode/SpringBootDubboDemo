@@ -1,11 +1,13 @@
 package com.example.demo.consumer;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.dubbo.demo.api.Demo1Service;
 import com.dubbo.demo.api.DemoService;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.dubbo.demo.api.domain.Girl;
+import com.dubbo.demo.api.domain.Girls;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @ProjectName: SpringBootDubboDemo
@@ -23,6 +25,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class DubboTestController {
     @Reference(check=false)//启动消费者不检查服务者是否存在
     public DemoService demoService;
+    @Reference
+    public Demo1Service demo1Service;
 
     @RequestMapping(value = "hello/{name}",method = RequestMethod.GET)
     public String Hello(@PathVariable String name){
@@ -34,6 +38,11 @@ public class DubboTestController {
             ret_msg = "出错啦！";
         }
         return  ret_msg;
+    }
+
+    @GetMapping(value = "/getList")
+    public List<Girls> getList(){
+        return demoService.getList();
     }
 
 }

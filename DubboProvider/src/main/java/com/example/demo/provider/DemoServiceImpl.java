@@ -1,8 +1,13 @@
 package com.example.demo.provider;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.dubbo.demo.api.DemoService;
+import com.dubbo.demo.api.domain.Girl;
+import com.dubbo.demo.api.domain.Girls;
+import com.example.demo.provider.mapper.DemoMapper;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @ProjectName: SpringBootDubboDemo
@@ -21,6 +26,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoServiceImpl implements DemoService{
 
+    @Resource
+    private DemoMapper demoMapper;
+
     @Override
     public String sayHello(String s) {
         String test = "调用失败";
@@ -29,5 +37,10 @@ public class DemoServiceImpl implements DemoService{
             e.printStackTrace();
         }
         return "provide服务提供方0:你好，"+s+"! \t\t " + test;
+    }
+
+    @Override
+    public List<Girls> getList() {
+        return demoMapper.getList();
     }
 }

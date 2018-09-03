@@ -1,5 +1,10 @@
 package com.dubbo.demo.api;
 
+import com.dubbo.demo.api.domain.Girl;
+import com.dubbo.demo.api.domain.Girls;
+
+import java.util.List;
+
 /**
  * @ProjectName: SpringBootDubboDemo
  * @Package: com.dubbo.demo.api
@@ -14,4 +19,6 @@ package com.dubbo.demo.api;
  */
 public interface DemoService {
     public String sayHello(String s);
+
+    public List<Girls> getList();
 }
