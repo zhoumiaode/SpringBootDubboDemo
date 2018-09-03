@@ -13,4 +13,6 @@ package com.dubbo.demo.api.domain;
  * @Version: 1.0
  */
 public class TT {
+
+    private String as;
 }
