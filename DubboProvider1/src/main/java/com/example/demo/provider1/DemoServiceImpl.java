@@ -1,9 +1,8 @@
-package com.example.demo.provider;
+package com.example.demo.provider1;
 
 import com.dubbo.demo.api.DemoService;
-import com.dubbo.demo.api.domain.Girl;
 import com.dubbo.demo.api.domain.Girls;
-import com.example.demo.provider.mapper.DemoMapper;
+import com.example.demo.provider1.mapper.DemoMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -31,7 +30,7 @@ public class DemoServiceImpl implements DemoService{
 
     @Override
     public String sayHello(String s) {
-        return "provider";
+        return "provider1";
     }
 
     @Override

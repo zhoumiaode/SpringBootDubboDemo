@@ -1,9 +1,8 @@
-package com.example.demo.consumer;
+package com.example.demo.consumer1;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.dubbo.demo.api.Demo1Service;
 import com.dubbo.demo.api.DemoService;
-import com.dubbo.demo.api.domain.Girl;
 import com.dubbo.demo.api.domain.Girls;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,5 +48,4 @@ public class DubboTestController {
     public String test(){
         return demoService.sayHello("");
     }
-
 }
