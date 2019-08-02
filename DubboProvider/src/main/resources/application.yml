@@ -1,0 +1,16 @@
+spring:
+  dubbo:
+    appname: provider
+    registry: zookeeper://47.108.70.12:2181
+    port: 20080
+    protocol: dubbo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+     #你自己的数据库IP地址和数据库名，账号以及密码
+    url: jdbc:mysql://127.0.0.1:3306/roy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    username: root
+    password: 123456
+server:
+  port: 8882
+
+
