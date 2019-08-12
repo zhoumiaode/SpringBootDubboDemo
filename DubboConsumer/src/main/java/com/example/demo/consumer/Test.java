@@ -8,10 +8,20 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
+/** head
+ *
+ */
 public class Test {
 
+    /** 
+     *@Author zhoumiaode 
+     *@Description TODO
+     *@Date 2019/8/12 11:12
+     *@Param [args]
+     *@Return void
+     *@Exception 
+     **/
     public static void main(String[] args){
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("1","2");
