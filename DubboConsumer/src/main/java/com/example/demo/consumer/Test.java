@@ -1,13 +1,40 @@
 package com.example.demo.consumer;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.logging.SimpleFormatter;
 
 public class Test {
 
-
     public static void main(String[] args){
-        JSONPObject jsonpObject=new JSONPObject("JSON","JSON");
-        System.out.print(jsonpObject.getValue());
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("1","2");
+        jsonObject.element("2","3");
+        System.out.print(jsonObject.toString()+"\n");
+        JSONArray jsonArray=new JSONArray();
+        for (int i=0;i<10;i++){
+            JSONObject jsonObject1=new JSONObject();
+            jsonObject1.put(i+2,i+2);
+            jsonArray.add(jsonObject1);
+        }
+        jsonObject.element("jsonArray",jsonArray);
+        System.out.print(jsonObject.toString()+"\n");
+
+        BigDecimal bigDecimal=new BigDecimal(100);
+        System.out.print(bigDecimal.divide(new BigDecimal(20))+"\n");
+
+        Calendar calendar= Calendar.getInstance();
+        System.out.print(calendar.getTime().toString()+"\n");
+        System.out.print(calendar.get(Calendar.YEAR)+"\n");
+        Date date =calendar.getTime();
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.print(simpleDateFormat.format(date));
 
     }
 }
