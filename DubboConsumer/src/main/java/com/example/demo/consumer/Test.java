@@ -57,6 +57,7 @@ public class Test {
             System.out.print(1);
         }else if(list.size()==0){
             System.out.print(2);
+            System.out.print(111);
         }
 
     }
