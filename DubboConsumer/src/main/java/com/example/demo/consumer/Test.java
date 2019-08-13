@@ -6,8 +6,10 @@ import net.sf.json.JSONObject;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /** head
  *
@@ -44,7 +46,18 @@ public class Test {
         System.out.print(calendar.get(Calendar.YEAR)+"\n");
         Date date =calendar.getTime();
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.print(simpleDateFormat.format(date));
+        System.out.print(simpleDateFormat.format(date)+"\n");
+        Calendar calendar1= Calendar.getInstance();
+        calendar1.add(Calendar.DATE,-1);
+        Date date1=calendar1.getTime();
+        System.out.print(simpleDateFormat.format(date1)+"\n");
+
+        List<String> list = new ArrayList<>();
+        if(list==null){
+            System.out.print(1);
+        }else if(list.size()==0){
+            System.out.print(2);
+        }
 
     }
 }
