@@ -2,6 +2,7 @@ package com.example.demo.provider;
 
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import com.dubbo.demo.api.DemoService;
+import com.dubbo.demo.api.domain.Girl;
 import com.dubbo.demo.api.domain.Girls;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -42,5 +44,18 @@ public class ProviderApplication {
     @GetMapping("test")
     public List<Girls> getGirls(){
         return demoService.getList();
+    }
+
+    @GetMapping("test1")
+    public List<Girls> getGirl(){
+        List<Girls> girls=new ArrayList<>();
+        for(int i =0;i<5;i++){
+            Girls girls1=new Girls();
+            girls1.setId(i);
+            girls1.setAge(i);
+            girls1.setName(""+i);
+            girls.add(girls1);
+        }
+        return  girls;
     }
 }

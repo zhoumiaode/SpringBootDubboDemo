@@ -50,4 +50,9 @@ public class DubboTestController {
         return demoService.sayHello("");
     }
 
+    @GetMapping(value = "test2")
+    public String test2(){
+        return demo1Service.sayHello("123");
+    }
+
 }

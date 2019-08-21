@@ -1,6 +1,8 @@
 package com.example.demo.consumer;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @ClassName TT
@@ -11,15 +13,14 @@ import java.io.IOException;
  **/
 public class TT {
 
-    /**
-     *@Author zhoumiaode
-     *@Description TODO
-     *@Date 2019/8/12 11:08
-     *@Param [str, str1]
-     *@Return java.lang.String
-     *@Exception
-     **/
-    public String method(String str,String str1)throws IOException{
-        return ";";
+    public static void main(String[] args){
+        Map<String ,Object> map =new HashMap<>();
+        map.put("a",null);
+        map.put("b","123");
+        for(int i=0;i<5;i++){
+            System.out.print("12"+"\n");
+            if(null==map.get("b"))continue;
+            else System.out.print("123"+"\n");
+        }
     }
 }
