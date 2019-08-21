@@ -70,7 +70,7 @@
                 <configuration>
                     <verbose>true</verbose>
                     <fork>true</fork>
-                    <executable>E://Program Files/Java/jdk1.8.0_77/bin/javac</executable>
+                    <executable>/usr/java/jdk1.8.0_221/bin/javac</executable>
                 </configuration>
             </plugin>
         </plugins>
