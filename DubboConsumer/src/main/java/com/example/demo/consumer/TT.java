@@ -20,7 +20,7 @@ public class TT {
         for(int i=0;i<5;i++){
             System.out.print("12"+"\n");
             if(null==map.get("b"))continue;
-            else System.out.print("1243"+"\n");
+            else System.out.print("1222243"+"\n");
         }
     }
 }
