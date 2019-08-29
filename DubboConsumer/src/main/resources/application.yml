@@ -6,5 +6,5 @@ server:
 spring:
   dubbo:
     appname: consumer-test
-    registry: zookeeper://47.108.70.12:2181
+    registry: zookeeper://47.240.20.111:2181
     protocol: dubbo
