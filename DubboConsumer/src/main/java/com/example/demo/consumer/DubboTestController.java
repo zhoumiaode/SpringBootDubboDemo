@@ -47,7 +47,7 @@ public class DubboTestController {
 
     @GetMapping(value = "test")
     public String test(){
-        return demoService.sayHello("");
+        return demoService.sayHello("111");
     }
 
     @GetMapping(value = "test2")
