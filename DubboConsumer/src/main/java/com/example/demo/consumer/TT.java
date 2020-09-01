@@ -16,7 +16,7 @@ public class TT {
     public static void main(String[] args){
         Map<String ,Object> map =new HashMap<>();
         map.put("a",null);
-        map.put("b","123");
+        map.put("b","123444");
         for(int i=0;i<5;i++){
             System.out.print("12"+"\n");
             if(null==map.get("b"))continue;
